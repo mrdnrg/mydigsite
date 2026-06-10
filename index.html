@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DIGITS — 999 numbers. One race.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="digits.css" />
+</head>
+<body data-hero="lineup">
+
+<nav class="nav" data-screen-label="Nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">DIGITS<sup>999</sup></a>
+    <div class="nav-links">
+      <a href="#rule">The Rule</a>
+      <a href="#rarity">Rarity</a>
+      <a href="#specials">Specials</a>
+      <a href="#mint">Mint</a>
+    </div>
+    <div class="nav-actions">
+      <a class="x-link" href="https://x.com/digits_nft" target="_blank" rel="noopener" aria-label="X / Twitter">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.2h3.7l-8.1 9.3L24 22.8h-7.5l-5.9-7.7-6.7 7.7H.2l8.7-9.9L0 1.2h7.7l5.3 7 6-7zm-1.3 19.4h2L6.6 3.3h-2.2l13.2 17.3z"></path></svg>
+      </a>
+      <a class="btn btn-primary btn-sm" href="#raffle">Join Raffle</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top" data-screen-label="Hero">
+
+  <!-- ===== Variant A: lineup ===== -->
+  <div class="hero-variant hv-lineup">
+    <div class="wrap hero-copy">
+      <span class="eyebrow">999 DIGITS &middot; Ethereum</span>
+      <h1 class="display">What's your number?</h1>
+      <p class="sub">Your mint position is the one you get. First come, lowest number.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#raffle">Join the Raffle</a>
+        <a class="btn btn-ghost" href="#rule">How it works</a>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="stage-arch"></div>
+      <div class="bubble bubble-1">literally the 1</div>
+      <div class="bubble bubble-2">gm</div>
+      <div class="lineup">
+        <img class="char" src="uploads/1.png" alt="DIGITS character number 1" />
+        <img class="char" src="uploads/2.png" alt="DIGITS character number 2" />
+        <img class="char" src="uploads/3.png" alt="DIGITS character number 3" />
+        <img class="char" src="uploads/4.png" alt="DIGITS character number 4" />
+        <img class="char" src="uploads/5.png" alt="DIGITS character number 5" />
+      </div>
+      <div class="stage-floor"></div>
+    </div>
+  </div>
+
+  <!-- ===== Variant B: solo ===== -->
+  <div class="hero-variant hv-solo">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">999 DIGITS &middot; Ethereum</span>
+        <h1 class="display">What's your<br /><span class="gold">number?</span></h1>
+        <p class="sub">Your mint position is the one you get. First come, lowest number.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#raffle">Join the Raffle</a>
+          <a class="btn btn-ghost" href="#rule">How it works</a>
+        </div>
+      </div>
+      <div>
+        <div class="solo-arch">
+          <div class="bubble">still #1, ofc</div>
+          <img class="char" src="uploads/1.png" alt="DIGITS character number 1" />
+        </div>
+        <div class="solo-floor"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Variant C: float ===== -->
+  <div class="hero-variant hv-float">
+    <div class="float-char fc-1"><img class="char" src="uploads/1.png" alt="DIGITS character number 1" /></div>
+    <div class="float-char fc-5"><img class="char" src="uploads/5.png" alt="DIGITS character number 5" /></div>
+    <div class="float-char fc-2"><img class="char" src="uploads/2.png" alt="DIGITS character number 2" /></div>
+    <div class="float-char fc-3"><img class="char" src="uploads/3.png" alt="DIGITS character number 3" /></div>
+    <div class="wrap hero-copy">
+      <span class="eyebrow">999 DIGITS &middot; Ethereum</span>
+      <h1 class="display">What's your number?</h1>
+      <p class="sub">Your mint position is the one you get. First come, lowest number.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#raffle">Join the Raffle</a>
+        <a class="btn btn-ghost" href="#rule">How it works</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Minting Soon <i class="dot">&#10022;</i> Supply 999 <i class="dot">&#10022;</i> Ethereum <i class="dot">&#10022;</i> Price TBA <i class="dot">&#10022;</i> WL &rarr; FCFS &rarr; Public <i class="dot">&#10022;</i></span>
+      <span>Minting Soon <i class="dot">&#10022;</i> Supply 999 <i class="dot">&#10022;</i> Ethereum <i class="dot">&#10022;</i> Price TBA <i class="dot">&#10022;</i> WL &rarr; FCFS &rarr; Public <i class="dot">&#10022;</i></span>
+    </div>
+  </div>
+</header>
+
+<!-- ===== The Rule ===== -->
+<section class="section" id="rule" data-screen-label="The Rule">
+  <div class="wrap rule-grid">
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">The Rule</span>
+        <h2 class="display">Mint 6th,<br />own the 6</h2>
+        <p class="sub">One rule. The order of the queue decides everything.</p>
+      </div>
+      <div class="rule-points">
+        <div class="rule-point"><span class="rule-num">01</span><b>Token ID = The Digit.</b><span>NFT #6 is the character 6. Always.</span></div>
+        <div class="rule-point"><span class="rule-num">02</span><b>First come, lowest number.</b><span>The earlier you mint, the smaller your digit.</span></div>
+        <div class="rule-point"><span class="rule-num">03</span><b>Instant reveal.</b><span>Once sold out, the DIGITS are revealed.</span></div>
+      </div>
+    </div>
+    <div class="rule-card">
+      <span class="tag">minted 6th</span>
+      <span class="tag gold-tag">owns the 6</span>
+      <img class="char" src="uploads/6.png" alt="DIGITS character number 6" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== Rarity ===== -->
+<section class="section" id="rarity" data-screen-label="Rarity">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Rarity</span>
+      <h2 class="display">Fewer digits, bigger flex</h2>
+      <p class="sub">Rarity isn't rolled — it's earned in the queue.</p>
+    </div>
+    <div class="rarity-grid">
+      <article class="rarity-card">
+        <span class="count-chip">9 / 999</span>
+        <div class="big">1–9</div>
+        <h3>Single Digit</h3>
+        <p>The grails. Nine exist. Wars will be fought.</p>
+      </article>
+      <article class="rarity-card">
+        <span class="count-chip">90 / 999</span>
+        <div class="big">10–99</div>
+        <h3>Double Digit</h3>
+        <p>The flex tier. Two digits, plenty of status.</p>
+      </article>
+      <article class="rarity-card">
+        <span class="count-chip">900 / 999</span>
+        <div class="big">100–999</div>
+        <h3>Triple Digit</h3>
+        <p>The crowd — but some of them hide secrets.</p>
+      </article>
+      <article class="rarity-card special">
+        <span class="count-chip">?? / 999</span>
+        <div class="big">&#10022;</div>
+        <h3>Special</h3>
+        <p>Numbers that mean something, drawn in theme. Any tier can hit.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Specials ===== -->
+<section class="section specials" id="specials" data-screen-label="Specials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Special Numbers</span>
+      <h2 class="display">Some numbers mean things</h2>
+      <p class="sub">Hidden across the 999. Each one is drawn on its theme, story in the description. We're only showing a few.</p>
+    </div>
+    <div class="specials-grid">
+      <article class="special-card">
+        <img src="uploads/67.png" alt="DIGITS special number 67" />
+        <div class="num">67</div>
+        <p class="meaning">six seven. if you know, you know.</p>
+      </article>
+      <article class="special-card">
+        <img src="uploads/300.png" alt="DIGITS special number 300" />
+        <div class="num">300</div>
+        <p class="meaning">the spartans. hold the line.</p>
+      </article>
+      <article class="special-card">
+        <img src="uploads/360.png" alt="DIGITS special number 360" />
+        <div class="num">360</div>
+        <p class="meaning">full circle. no shortcuts.</p>
+      </article>
+      <article class="special-card">
+        <img src="uploads/737.png" alt="DIGITS special number 737" />
+        <div class="num">737</div>
+        <p class="meaning">frequent flyers. boarding soon.</p>
+      </article>
+      <article class="special-card">
+        <img src="uploads/911.png" alt="DIGITS special number 911" />
+        <div class="num">911</div>
+        <p class="meaning">the rescue squad. always on call.</p>
+      </article>
+      <article class="special-card mystery">
+        <div class="num">???</div>
+        <p class="meaning">many more hidden. revealed at mint.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Mint phases ===== -->
+<section class="section" id="mint" data-screen-label="Mint Phases">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Mint</span>
+      <h2 class="display">Three phases. One queue.</h2>
+    </div>
+    <div class="phases-grid">
+      <article class="phase-card">
+        <span class="phase-num">Phase 01</span>
+        <h3>Whitelist</h3>
+        <p>Guaranteed spot at the front of the race. Won through the raffle.</p>
+      </article>
+      <article class="phase-card">
+        <span class="phase-num">Phase 02</span>
+        <h3>FCFS</h3>
+        <p>First come, first served. Raffle winners — fastest fingers eat.</p>
+      </article>
+      <article class="phase-card">
+        <span class="phase-num">Phase 03</span>
+        <h3>Public</h3>
+        <p>Doors open for everyone. Whatever numbers are left, are left.</p>
+      </article>
+    </div>
+    <div class="phase-meta">
+      <span class="meta-chip hot">Minting Soon</span>
+      <span class="meta-chip">Price TBA</span>
+      <span class="meta-chip">Supply 999</span>
+      <span class="meta-chip">Ethereum</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Raffle ===== -->
+<section class="section raffle" id="raffle" data-screen-label="Raffle">
+  <div class="wrap raffle-grid">
+    <div class="raffle-char">
+      <div class="bubble">feeling lucky?</div>
+      <img src="uploads/777.png" alt="DIGITS special number 777" />
+    </div>
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">WL &amp; FCFS Raffle</span>
+        <h2 class="display">Join the raffle</h2>
+        <p class="sub">30 seconds. Drop your wallet, do the tasks, pray to the number gods.</p>
+      </div>
+      <form class="raffle-form" id="raffleForm">
+        <div class="raffle-fields">
+          <div class="field">
+            <label for="wallet">ETH Wallet</label>
+            <input type="text" id="wallet" name="wallet" placeholder="0x… or yourname.eth" autocomplete="off" spellcheck="false" />
+          </div>
+          <div class="field">
+            <label for="twitter">Twitter / X handle</label>
+            <input type="text" id="twitter" name="twitter" placeholder="@yourhandle" autocomplete="off" spellcheck="false" />
+          </div>
+          <div class="tasks">
+            <a class="task" data-task="like" href="https://x.com/digits_nft" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.3 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3.4 1-4.5 2.5C10.9 4 9.3 3 7.5 3A5.5 5.5 0 0 0 2 8.5c0 2.2 1.5 4 3 5.5l7 7z"></path></svg>
+              <span class="task-label">Like the post</span>
+              <span class="check">DONE &#10003;</span>
+            </a>
+            <a class="task" data-task="repost" href="https://x.com/digits_nft" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+              <span class="task-label">Repost it</span>
+              <span class="check">DONE &#10003;</span>
+            </a>
+            <a class="task" data-task="comment" href="https://x.com/digits_nft" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.4 8.4c-1.5 0-3-.4-4.3-1.1L3 20l1.2-5.3A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+              <span class="task-label">Comment</span>
+              <span class="check">DONE &#10003;</span>
+            </a>
+          </div>
+          <button class="btn btn-enter" type="submit" id="enterBtn">Enter the Raffle</button>
+          <p class="form-error" id="formError"></p>
+          <p class="raffle-note">Winners announced on <a href="https://x.com/digits_nft" target="_blank" rel="noopener" style="color: inherit;">@digits_nft</a>.</p>
+        </div>
+        <div class="raffle-success">
+          <div class="big-check">&#127881;</div>
+          <h3>You're in</h3>
+          <p>Entry received. Watch @digits_nft for the WL announcement. wagmi.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="giant">DIGITS</div>
+    <p class="tagline">999 numbers. What's yours?</p>
+    <div class="footer-meta">
+      <a href="https://x.com/digits_nft" target="_blank" rel="noopener">@digits_nft</a>
+      <span>Supply 999</span>
+      <span>Ethereum</span>
+      <span>&copy; 2026 DIGITS</span>
+    </div>
+  </div>
+</footer>
+
+<script src="digits.js"></script>
+
+<!-- Tweaks panel (design controls) -->
+<div id="tweaks-root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="digits-tweaks.jsx"></script>
+
+</body>
+</html>

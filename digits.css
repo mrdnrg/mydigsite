@@ -593,6 +593,10 @@ body[data-hero="float"] .hv-float { display: block; }
   .fc-2, .fc-3 { display: none; }
   .raffle-char { display: none; }
 }
+@media (max-width: 700px) {
+  .rule-point { flex-wrap: wrap; row-gap: 4px; }
+  .rule-point span { flex-basis: 100%; }
+}
 @media (max-width: 560px) {
   .wrap { padding: 0 20px; }
   .specials-grid { grid-template-columns: 1fr; }

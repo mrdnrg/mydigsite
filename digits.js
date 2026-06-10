@@ -6,6 +6,40 @@
    While empty, the form simulates success so the site can be previewed. */
 var XANO_ENDPOINT = "https://x8ki-letl-twmt.n7.xano.io/api:wgkvOFMI/raffle";
 
+/* ---- Hero by device: float on desktop, lineup on mobile ---- */
+(function () {
+  function updateHero() {
+    document.body.dataset.hero = window.innerWidth <= 920 ? "lineup" : "float";
+  }
+  window.addEventListener("resize", updateHero);
+  updateHero();
+})();
+
+/* ---- Auto-zoom for wide screens ----
+   The layout is designed around ~1440px. On wide monitors we scale the whole
+   page up (like browser zoom) so it doesn't look small and spread out.
+   Each hero variant has its own "design width" so e.g. float gets ~175%
+   and lineup ~140% on a 2560px screen. Never scales below 1. */
+(function () {
+  var BASE_WIDTH = { float: 1460, lineup: 1830, solo: 1640 };
+  var MAX_ZOOM = 2;
+
+  function updateZoom() {
+    var hero = document.body.dataset.hero || "lineup";
+    var base = BASE_WIDTH[hero] || 1640;
+    var z = Math.min(MAX_ZOOM, Math.max(1, window.innerWidth / base));
+    document.body.style.zoom = z === 1 ? "" : z;
+  }
+
+  window.addEventListener("resize", updateZoom);
+  window.addEventListener("tweakchange", updateZoom);
+  new MutationObserver(updateZoom).observe(document.body, {
+    attributes: true,
+    attributeFilter: ["data-hero"]
+  });
+  updateZoom();
+})();
+
 (function () {
   var form = document.getElementById("raffleForm");
   if (!form) return;

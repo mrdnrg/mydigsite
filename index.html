@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DIGITS — 999 numbers. One race.</title>
+<title>DIGITS — 999 digits. One race.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -17,6 +17,7 @@
     <div class="nav-links">
       <a href="#rule">The Rule</a>
       <a href="#rarity">Rarity</a>
+      <a href="#traits">Traits</a>
       <a href="#specials">Specials</a>
       <a href="#mint">Mint</a>
     </div>
@@ -164,6 +165,33 @@
   </div>
 </section>
 
+<!-- ===== Traits ===== -->
+<section class="section traits" id="traits" data-screen-label="Traits">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Traits</span>
+      <h2 class="display">All of history.<br />In digits.</h2>
+      <p class="sub">Every DIGIT is dressed by its era — from mammoth hunters to neon cyberpunks. Plus a few for those who skipped history class.</p>
+    </div>
+
+    <div class="tgrid">
+      <article class="trait-card"><img src="uploads/Mammoth Hunter.png" alt="Mammoth Hunter trait" /><div class="trait-name">Mammoth Hunter</div><div class="trait-era">Stone Age</div></article>
+      <article class="trait-card"><img src="uploads/Desert Mystic.png" alt="Desert Mystic trait" /><div class="trait-name">Desert Mystic</div><div class="trait-era">Nomad Ages</div></article>
+      <article class="trait-card"><img src="uploads/Scientist.png" alt="Scientist trait" /><div class="trait-name">Scientist</div><div class="trait-era">The Lab</div></article>
+      <article class="trait-card"><img src="uploads/Roman Legionary.png" alt="Roman Legionary trait" /><div class="trait-name">Roman Legionary</div><div class="trait-era">Roman Empire</div></article>
+      <article class="trait-card"><img src="uploads/Aristocrat.png" alt="Aristocrat trait" /><div class="trait-name">Aristocrat</div><div class="trait-era">Royal Courts</div></article>
+      <article class="trait-card"><img src="uploads/Balenciaga.png" alt="Balenciaga trait" /><div class="trait-name">Balenciaga</div><div class="trait-era">High Fashion</div></article>
+      <article class="trait-card"><img src="uploads/Sport.png" alt="Sport trait" /><div class="trait-name">Sport</div><div class="trait-era">Game Day</div></article>
+      <article class="trait-card"><img src="uploads/Pharaoh.png" alt="Pharaoh trait" /><div class="trait-name">Pharaoh</div><div class="trait-era">Ancient Egypt</div></article>
+      <article class="trait-card"><img src="uploads/Astronaut.png" alt="Astronaut trait" /><div class="trait-name">Astronaut</div><div class="trait-era">Space Age</div></article>
+      <article class="trait-card"><img src="uploads/Streetwear.png" alt="Streetwear trait" /><div class="trait-name">Streetwear</div><div class="trait-era">The Streets</div></article>
+      <article class="trait-card"><img src="uploads/Cyberpunk Neon.png" alt="Cyberpunk Neon trait" /><div class="trait-name">Cyberpunk Neon</div><div class="trait-era">Year 2077</div></article>
+      <article class="trait-card trait-mystery"><div class="trait-q">???</div><div class="trait-name">And many more</div><div class="trait-era">Revealed at mint</div></article>
+    </div>
+
+  </div>
+</section>
+
 <!-- ===== Specials ===== -->
 <section class="section specials" id="specials" data-screen-label="Specials">
   <div class="wrap">
@@ -217,17 +245,17 @@
       <article class="phase-card">
         <span class="phase-num">Phase 01</span>
         <h3>Whitelist</h3>
-        <p>Guaranteed spot at the front of the race. Won through the raffle.</p>
+        <p>A spot at the front of the race. Won through the raffle.</p>
       </article>
       <article class="phase-card">
         <span class="phase-num">Phase 02</span>
         <h3>FCFS</h3>
-        <p>First come, first served. Raffle winners — fastest fingers eat.</p>
+        <p>First come, first served. Fastest fingers eat.</p>
       </article>
       <article class="phase-card">
         <span class="phase-num">Phase 03</span>
         <h3>Public</h3>
-        <p>Doors open for everyone. Whatever numbers are left, are left.</p>
+        <p>Doors open for everyone. If anything's left by then.</p>
       </article>
     </div>
     <div class="phase-meta">
@@ -279,6 +307,10 @@
               <span class="check">DONE &#10003;</span>
             </a>
           </div>
+          <div class="field">
+            <label for="commentLink">Link to your comment (proof)</label>
+            <input type="text" id="commentLink" name="commentLink" placeholder="https://x.com/yourhandle/status/…" autocomplete="off" spellcheck="false" />
+          </div>
           <button class="btn btn-enter" type="submit" id="enterBtn">Enter the Raffle</button>
           <p class="form-error" id="formError"></p>
           <p class="raffle-note">Winners announced on <a href="https://x.com/digits_nft" target="_blank" rel="noopener" style="color: inherit;">@digits_nft</a>.</p>
@@ -296,7 +328,7 @@
 <footer class="footer" data-screen-label="Footer">
   <div class="wrap">
     <div class="giant">DIGITS</div>
-    <p class="tagline">999 numbers. What's yours?</p>
+    <p class="tagline">999 digits. What's yours?</p>
     <div class="footer-meta">
       <a href="https://x.com/digits_nft" target="_blank" rel="noopener">@digits_nft</a>
       <span>Supply 999</span>

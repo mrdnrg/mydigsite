@@ -46,6 +46,7 @@ var XANO_ENDPOINT = "https://x8ki-letl-twmt.n7.xano.io/api:wgkvOFMI/raffle";
 
   var walletInput = document.getElementById("wallet");
   var twitterInput = document.getElementById("twitter");
+  var commentInput = document.getElementById("commentLink");
   var enterBtn = document.getElementById("enterBtn");
   var errorEl = document.getElementById("formError");
 
@@ -90,6 +91,7 @@ var XANO_ENDPOINT = "https://x8ki-letl-twmt.n7.xano.io/api:wgkvOFMI/raffle";
     errorEl.style.display = "none";
     walletInput.classList.remove("invalid");
     twitterInput.classList.remove("invalid");
+    commentInput.classList.remove("invalid");
   }
 
   function validWallet(w) {
@@ -102,6 +104,7 @@ var XANO_ENDPOINT = "https://x8ki-letl-twmt.n7.xano.io/api:wgkvOFMI/raffle";
 
     var wallet = walletInput.value.trim();
     var twitter = twitterInput.value.trim().replace(/^@/, "");
+    var comment = commentInput.value.trim();
 
     if (!validWallet(wallet)) {
       walletInput.classList.add("invalid");
@@ -111,6 +114,11 @@ var XANO_ENDPOINT = "https://x8ki-letl-twmt.n7.xano.io/api:wgkvOFMI/raffle";
     if (!/^[A-Za-z0-9_]{1,15}$/.test(twitter)) {
       twitterInput.classList.add("invalid");
       showError("Drop a valid X handle, like @digits_nft.");
+      return;
+    }
+    if (!/^https?:\/\/(www\.)?(x\.com|twitter\.com)\/.+/i.test(comment)) {
+      commentInput.classList.add("invalid");
+      showError("Paste the link to your comment — it should start with https://x.com/…");
       return;
     }
 
@@ -136,7 +144,7 @@ var XANO_ENDPOINT = "https://x8ki-letl-twmt.n7.xano.io/api:wgkvOFMI/raffle";
     fetch(XANO_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ wallet: wallet, twitter: twitter })
+      body: JSON.stringify({ wallet: wallet, twitter: twitter, comment_url: comment })
     })
       .then(function (res) {
         if (res.ok) success();

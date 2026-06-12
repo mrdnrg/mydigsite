@@ -28,7 +28,17 @@ var XANO_ENDPOINT = "https://x8ki-letl-twmt.n7.xano.io/api:wgkvOFMI/raffle";
     var hero = document.body.dataset.hero || "lineup";
     var base = BASE_WIDTH[hero] || 1640;
     var z = Math.min(MAX_ZOOM, Math.max(1, window.innerWidth / base));
-    document.body.style.zoom = z === 1 ? "" : z;
+
+    // The full zoom is only needed for the hero (floating digits stage).
+    // The rest of the page gets just a gentle bump so it doesn't feel cramped.
+    var zPage = 1 + (z - 1) * 0.65;
+    document.body.style.zoom = zPage === 1 ? "" : zPage;
+
+    var heroEl = document.querySelector(".hero");
+    if (heroEl) {
+      var zHero = z / zPage; // compounds with body zoom -> hero ends up at full z
+      heroEl.style.zoom = Math.abs(zHero - 1) < 0.005 ? "" : zHero;
+    }
   }
 
   window.addEventListener("resize", updateZoom);
@@ -49,16 +59,6 @@ var XANO_ENDPOINT = "https://x8ki-letl-twmt.n7.xano.io/api:wgkvOFMI/raffle";
   var commentInput = document.getElementById("commentLink");
   var enterBtn = document.getElementById("enterBtn");
   var errorEl = document.getElementById("formError");
-
-  // Dev helper: open the site with ?reset to clear your entry and test again
-  try {
-    if (location.search.indexOf("reset") !== -1) {
-      localStorage.removeItem("digits_raffle_entered");
-      localStorage.removeItem("digits_task_like");
-      localStorage.removeItem("digits_task_repost");
-      localStorage.removeItem("digits_task_comment");
-    }
-  } catch (e) {}
 
   // Already entered on this device?
   try {

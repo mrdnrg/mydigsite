@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>DIGITS — Collab Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="digits.css" />
+<style>
+  .brief-hero { padding: 84px 0 56px; }
+  .brief-hero h1 { font-size: clamp(48px, 7vw, 88px); margin: 14px 0 18px; }
+  .brief-hero .sub { max-width: 640px; }
+
+  .brief-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 18px;
+    align-items: start;
+    padding-bottom: 96px;
+  }
+  .brief-col { display: grid; gap: 18px; min-width: 0; }
+
+  .brief-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px;
+  }
+  .brief-card h2 {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .brief-card p { font-size: 16px; line-height: 1.6; color: var(--ink); text-wrap: pretty; }
+  .brief-card p + p { margin-top: 12px; }
+
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .fact {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 16px 18px;
+  }
+  .fact .k { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .fact .v { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; margin-top: 4px; }
+  .fact .v.gold { color: var(--accent); }
+
+  .req-list { display: grid; gap: 10px; list-style: none; }
+  .req-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 14px 18px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .req-list .n {
+    font-weight: 900;
+    color: var(--accent);
+    font-size: 14px;
+    flex: none;
+  }
+  .req-list a { color: var(--ink); font-weight: 700; }
+
+  .winner-format {
+    background: var(--ink);
+    color: #f1ead9;
+    border-radius: 16px;
+    padding: 18px 20px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .winner-format .dim { color: rgba(241, 234, 217, 0.5); }
+
+  .warn-card {
+    background: linear-gradient(160deg, #2f2920 0%, #211d16 100%);
+    color: #f1ead9;
+    border: none;
+  }
+  .warn-card h2 { color: rgba(241, 234, 217, 0.6); }
+  .warn-card p { color: #f1ead9; }
+  .warn-card p strong { color: var(--accent); }
+
+  .brief-char { text-align: center; padding: 8px 0 0; }
+  .brief-char img { width: 100%; max-width: 300px; height: auto; filter: drop-shadow(0 30px 26px rgba(42, 37, 30, 0.25)); }
+
+  @media (max-width: 920px) {
+    .brief-grid { grid-template-columns: 1fr; }
+    .brief-char { display: none; }
+  }
+  @media (max-width: 560px) {
+    .facts { grid-template-columns: 1fr; }
+    .brief-card { padding: 24px; }
+  }
+</style>
+</head>
+<body data-hero="lineup">
+
+<nav class="nav" data-screen-label="Nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="index.html">DIGITS<sup>999</sup></a>
+    <div class="nav-actions" style="margin-left: auto;">
+      <a class="x-link" href="https://x.com/digits_nft" target="_blank" rel="noopener" aria-label="X / Twitter">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.2h3.7l-8.1 9.3L24 22.8h-7.5l-5.9-7.7-6.7 7.7H.2l8.7-9.9L0 1.2h7.7l5.3 7 6-7zm-1.3 19.4h2L6.6 3.3h-2.2l13.2 17.3z"></path></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="brief-hero" data-screen-label="Collab Hero">
+  <div class="wrap">
+    <span class="eyebrow">Collab managers only</span>
+    <h1 class="display">Collab brief</h1>
+    <p class="sub">Everything you need to run a DIGITS WL raffle in your community — via Alphabot or X. Please read the whole page before launching.</p>
+  </div>
+</header>
+
+<main class="wrap brief-grid" data-screen-label="Collab Brief">
+  <div class="brief-col">
+
+    <section class="brief-card">
+      <h2>About the project</h2>
+      <p>DIGITS is a collection of 999 number characters on Ethereum. The twist: <strong>your token ID is your number</strong>. Mint #1 is literally THE 1. First come, lowest number — so the mint itself is a race.</p>
+      <p>Every digit is a dressed-up character — streetwear, history, pop culture. Hidden across the 999 are special numbers (67, 300, 360, 737, 911&hellip;) drawn on their own theme, with the story in the description. Low numbers, meme numbers and specials are the chase.</p>
+    </section>
+
+    <section class="brief-card">
+      <h2>Raffle requirements</h2>
+      <ul class="req-list">
+        <li><span class="n">01</span><span>Follow <a href="https://x.com/digits_nft" target="_blank" rel="noopener">@digits_nft</a> on X</span></li>
+        <li><span class="n">02</span><span>Like &amp; repost — the post link will be provided by our team</span></li>
+        <li><span class="n">03</span><span>Entries must be <strong>visible</strong> (public entry list on the raffle)</span></li>
+        <li><span class="n">04</span><span>At least <strong>70% of the allocation</strong> must be raffled off to your community &mdash; not handed to your own team or insiders</span></li>
+      </ul>
+    </section>
+
+    <section class="brief-card">
+      <h2>Winner submission format</h2>
+      <p>For every winner, submit all four fields:</p>
+      <div class="winner-format" style="margin-top: 14px;">
+        Discord name <span class="dim">+</span> Discord ID <span class="dim">+</span> X handle <span class="dim">+</span> wallet<br />
+        <span class="dim">e.g.&nbsp; numberfan &middot; 302875106592253 &middot; @numberfan &middot; 0x12ab&hellip;</span>
+      </div>
+    </section>
+
+    <section class="brief-card warn-card">
+      <h2>Please note</h2>
+      <p>All collaborations are <strong>DTC</strong> (direct to contract). Failure to meet the conditions on this page may result in the <strong>collaboration being cancelled</strong>.</p>
+      <p>We only give out <strong>WL</strong> spots (no FCFS). Note that WL may carry a small overallocation of <strong>around 20%</strong>.</p>
+      <p>Allocation must genuinely go to your community. If we see spots funneled into your own wallets instead of a real raffle, we reserve the right to <strong>remove all of those wallets</strong>.</p>
+    </section>
+
+  </div>
+
+  <div class="brief-col">
+    <section class="brief-card">
+      <h2>Key facts</h2>
+      <div class="facts">
+        <div class="fact"><div class="k">Mint price</div><div class="v gold">TBA</div></div>
+        <div class="fact"><div class="k">Supply</div><div class="v">999</div></div>
+        <div class="fact"><div class="k">Chain</div><div class="v">Ethereum</div></div>
+        <div class="fact"><div class="k">Collabs</div><div class="v">DTC</div></div>
+      </div>
+    </section>
+    <div class="brief-char">
+      <img src="uploads/57_collab.png" alt="DIGITS characters 5 and 7" />
+    </div>
+  </div>
+</main>
+
+<footer class="footer" data-screen-label="Footer">
+  <div class="wrap">
+    <div class="giant">DIGITS</div>
+    <p class="tagline">999 digits. What's yours?</p>
+    <div class="footer-meta">
+      <a href="https://x.com/digits_nft" target="_blank" rel="noopener">@digits_nft</a>
+      <span>Supply 999</span>
+      <span>Ethereum</span>
+      <span>&copy; 2026 DIGITS</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
